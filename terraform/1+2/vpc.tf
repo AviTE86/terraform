@@ -20,6 +20,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_subnet" "public" {
   count                   = var.subnet_count
   vpc_id                  = aws_vpc.main.id
+  availability_zone       = ["us-east-1a", "us-east-1b", "us-east-1c"][count.index]
   cidr_block              = cidrsubnet(var.vpc_cidr, 8, count.index)
   map_public_ip_on_launch = true
 

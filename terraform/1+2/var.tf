@@ -14,7 +14,7 @@ variable "instance_type" {
   type        = string
   description = "EC2 instance type"
   # Use free-tier eligible instance type by default
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "assign_public_ip" {

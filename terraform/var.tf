@@ -31,5 +31,6 @@ variable "assign_public_ip" {
 variable "asg_instance_type" {
   type        = string
   description = "EC2 instance type for ASG instances behind the ALB (module 3+4+5)"
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
+

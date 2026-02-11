@@ -45,7 +45,7 @@ data "aws_ami" "ubuntu_22" {
 resource "aws_instance" "web" {
   ami                         = "ami-0c398cb65a93047f2"
   instance_type               = "t3.micro"
-  subnet_id                   = aws_subnet.public[*].id
+  subnet_id                   = aws_subnet.public[0].id
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
   associate_public_ip_address = true
 
